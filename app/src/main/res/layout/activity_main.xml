@@ -11,12 +11,6 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="800dp"
@@ -55,7 +49,7 @@
                 android:textSize="80dp"
                 android:textIsSelectable="false"
                 android:layout_weight="0.01"
-                android:gravity="center_vertical" />
+                android:textAlignment="center" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,31 +68,33 @@
                 android:layout_height="wrap_content"
                 android:text="AM/FM"
                 android:id="@+id/button"
-                android:layout_gravity="left|center_horizontal" />
+                android:layout_gravity="left|center_horizontal"
+                android:layout_weight="0.03" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.13" />
 
-            <Button
+            <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="REPLAY"
-                android:id="@+id/button2"
-                android:textColor="#ea6464" />
+                android:text="POWER"
+                android:id="@+id/toggleButton"
+                android:checked="false"
+                android:layout_weight="0.05" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.16" />
+                android:layout_weight="0.11" />
 
             <Button
-                android:layout_width="95dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PRESET"
                 android:id="@+id/button3"
-                android:layout_weight="0.04" />
+                android:layout_weight="0.05" />
         </LinearLayout>
 
         <LinearLayout
@@ -107,7 +103,22 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.19"
-            android:background="#cc5757"></LinearLayout>
+            android:background="#000000"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:id="@+id/button8"
+                android:background="#fe7878"
+                android:layout_weight="0.60" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -141,7 +152,7 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
-                android:layout_weight="0.08" />
+                android:layout_weight="0.20" />
 
             <Button
                 android:layout_width="72dp"
@@ -151,7 +162,8 @@
 
             <Space
                 android:layout_width="32dp"
-                android:layout_height="94dp" />
+                android:layout_height="94dp"
+                android:layout_weight="0.04" />
 
             <Button
                 android:layout_width="54dp"
@@ -176,12 +188,12 @@
                 android:layout_height="108dp"
                 android:layout_weight="0.16" />
 
-            <ToggleButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="POWER"
-                android:id="@+id/toggleButton"
-                android:checked="false" />
+                android:text="REPLAY"
+                android:id="@+id/button2"
+                android:textColor="#ea6464" />
 
         </LinearLayout>
 
@@ -197,19 +209,21 @@
                 android:layout_height="wrap_content"
                 android:text="VOLUME"
                 android:id="@+id/textView3"
-                android:layout_weight="0.05" />
+                android:layout_weight="0.05"
+                android:textAlignment="center"
+                />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="0.13" />
+                android:layout_weight="0.10" />
 
             <SeekBar
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekBar"
-                android:layout_weight="0.80" />
+                android:layout_weight="0.82" />
         </LinearLayout>
 
         <LinearLayout
@@ -217,14 +231,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#686868"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:layout_weight="0.06">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TUNE"
                 android:id="@+id/textView4"
-                android:layout_weight="0.09" />
+                android:layout_weight="0.09"
+                android:textAlignment="center"
+         />
 
             <Space
                 android:layout_width="wrap_content"
