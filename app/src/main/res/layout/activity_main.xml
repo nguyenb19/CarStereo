@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,10 +7,237 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.nguyenb19.carstereo.MainActivity">
+    tools:context="com.example.nguyenb19.carstereo.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="Hello World!"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="800dp"
+        android:layout_height="322dp"
+        android:background="#000000"
+        android:nestedScrollingEnabled="true"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+
+        <Space
+            android:layout_width="744dp"
+            android:layout_height="53dp"
+            android:layout_weight="0.06" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="175dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="419dp"
+                android:layout_height="match_parent"
+                android:text="10:00 PM"
+                android:id="@+id/textView2"
+                android:background="#9b9b9b"
+                android:autoText="false"
+                android:textSize="80dp"
+                android:textIsSelectable="false"
+                android:layout_weight="0.01"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.17" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM/FM"
+                android:id="@+id/button"
+                android:layout_gravity="left|center_horizontal" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.16" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REPLAY"
+                android:id="@+id/button2"
+                android:textColor="#ea6464" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.16" />
+
+            <Button
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="PRESET"
+                android:id="@+id/button3"
+                android:layout_weight="0.04" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.19"
+            android:background="#cc5757"></LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="800dp"
+            android:layout_height="92dp"
+            android:background="#686868"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="149dp"
+                android:layout_height="73dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PAUSE"
+                android:id="@+id/button4" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="72dp"
+                android:layout_weight="0.08" />
+
+            <Button
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:text="STOP"
+                android:id="@+id/button5" />
+
+            <Space
+                android:layout_width="32dp"
+                android:layout_height="94dp" />
+
+            <Button
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:text="EJECT"
+                android:id="@+id/button6"
+                android:layout_weight="0.07" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="92dp"
+                android:layout_weight="0.17" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FORWARD"
+                android:id="@+id/button7" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="108dp"
+                android:layout_weight="0.16" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POWER"
+                android:id="@+id/toggleButton"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:background="#686868"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VOLUME"
+                android:id="@+id/textView3"
+                android:layout_weight="0.05" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.13" />
+
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_weight="0.80" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#686868"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TUNE"
+                android:id="@+id/textView4"
+                android:layout_weight="0.09" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.09" />
+
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar2"
+                android:layout_weight="0.79" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
